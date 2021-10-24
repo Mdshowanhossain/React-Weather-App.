@@ -40,14 +40,14 @@ const SearchBox = styled.form`
   }
 `;
 
-const CityComponents = () => {
+const CityComponents = ({ setCity, fetchWeather }) => {
   return (
     <>
       <WeatherLogo src="/icons/perfect-day.svg" />
       <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
-      <SearchBox>
-        <input placeholder="City" />
-        <button>Search</button>
+      <SearchBox onSubmit={fetchWeather}>
+        <input placeholder="City" onChange={(e) => setCity(e.target.value)} />
+        <button type="submit">Search</button>
       </SearchBox>
     </>
   );

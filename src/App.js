@@ -1,8 +1,11 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 import CityComponents from "./Components/CityComponents/CityComponents";
 import WeatherComponents from "./Components/WeatherComponents/WeatherComponents";
+
+const API_KEY = "d9584d01419d0b07c357612e4d13d8be";
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +14,7 @@ const Container = styled.div`
   align-items: center;
   box-shadow: 0 3px 6px 0 #555;
   border-radius: 5px;
-  width: 480px;
+  width: 440px;
   background: white;
 `;
 const AppLabel = styled.span`
@@ -29,17 +32,31 @@ const WeatherComponent = styled.div`
   flex-direction: column;
 `;
 const App = () => {
+  const [city, setCity] = useState("");
+  const [weather, setWeather] = useState("");
+
+  const fetchWeather = async (e) => {
+    e.preventDefault();
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+    );
+    setWeather(response.data);
+  };
+
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      {/* <CityComponent>
-        <WeatherComponents />
-      </CityComponent> */}
-      <CityComponent>
-        <WeatherComponents />
-      </CityComponent>
+      {/* <CityComponent></CityComponent> */}
+      {weather ? (
+        <WeatherComponents weather={weather} />
+      ) : (
+        <CityComponents setCity={setCity} fetchWeather={fetchWeather} />
+      )}
+
+      {/* <WeatherComponents /> */}
+
       {/* <WeatherComponent>
-        <WeatherComponents />
+        
       </WeatherComponent> */}
     </Container>
   );
