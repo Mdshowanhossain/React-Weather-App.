@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   box-shadow: 0 3px 6px 0 #555;
   border-radius: 5px;
-  width: 380px;
+  width: 480px;
   background: white;
 `;
 const AppLabel = styled.span`
@@ -32,12 +32,15 @@ const App = () => {
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <CityComponent>
-        <CityComponents />
-      </CityComponent>
-      <WeatherComponent>
+      {/* <CityComponent>
         <WeatherComponents />
-      </WeatherComponent>
+      </CityComponent> */}
+      <CityComponent>
+        <WeatherComponents />
+      </CityComponent>
+      {/* <WeatherComponent>
+        <WeatherComponents />
+      </WeatherComponent> */}
     </Container>
   );
 };
