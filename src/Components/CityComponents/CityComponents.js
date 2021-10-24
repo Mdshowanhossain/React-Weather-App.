@@ -7,7 +7,7 @@ const WeatherLogo = styled.img`
   margin: 40px auto;
 `;
 const ChooseCityLabel = styled.span`
-  color: black;
+  color: #3dcfd3;
   font-size: 18px;
   font-family: Monospace;
   font-weight: bold;
@@ -29,14 +29,22 @@ const SearchBox = styled.form`
     outline: none;
   }
   & button {
-    padding: 10px;
-    font-size: 14px;
-    border: none;
+    padding: 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid #3dcfd3;
+    // margin-left: 1px;
     outline: none;
-    color: white;
+    color: #3dcfd3;
     background: black;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  & button:hover {
+    background-color: #3dcfd3;
+    color: white;
+    border: 1px solid #3dcfd3;
   }
 `;
 

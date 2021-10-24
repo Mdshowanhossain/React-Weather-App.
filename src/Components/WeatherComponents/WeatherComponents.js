@@ -45,14 +45,17 @@ const WeatherLogo = styled.img`
 const Condition = styled.span`
   margin: 20px auto;
   font-size: 14px;
+  color: #3dcfd3;
   & span {
     font-size: 28px;
+    color: #3dcfd3;
   }
 `;
 
 const Location = styled.span`
   font-size: 27px;
   font-weight: bold;
+  color: #3dcfd3;
 `;
 const WeatherInfoLabel = styled.span`
   font-size: 14px;
@@ -60,6 +63,7 @@ const WeatherInfoLabel = styled.span`
   margin: 20px;
   text-align: start;
   width: 70%;
+  color: #3dcfd3;
 `;
 
 const InfoContainer = styled.div`
@@ -69,10 +73,15 @@ const InfoContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  color: #3dcfd3;
 `;
 const InfoIcon = styled.img`
   width: 36px;
   height: 36px;
+  background: #3dcfd3;
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
 `;
 const InfoLabel = styled.span`
   display: flex;

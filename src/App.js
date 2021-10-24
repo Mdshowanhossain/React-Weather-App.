@@ -14,13 +14,15 @@ const Container = styled.div`
   align-items: center;
   box-shadow: 0 3px 6px 0 #555;
   border-radius: 5px;
-  width: 440px;
-  background: white;
+  width: 470px;
+  background: #161616;
 `;
 const AppLabel = styled.span`
-  color: black;
+  color: #3dcfd3;
   font-size: 24px;
   font-weight: bold;
+  // margin-top: 20px;
+  padding-top: 35px;
 `;
 
 const CityComponent = styled.div`
@@ -45,19 +47,12 @@ const App = () => {
 
   return (
     <Container>
-      <AppLabel>React Weather App</AppLabel>
-      {/* <CityComponent></CityComponent> */}
+      <AppLabel>Weather App</AppLabel>
       {weather ? (
         <WeatherComponents weather={weather} />
       ) : (
         <CityComponents setCity={setCity} fetchWeather={fetchWeather} />
       )}
-
-      {/* <WeatherComponents /> */}
-
-      {/* <WeatherComponent>
-        
-      </WeatherComponent> */}
     </Container>
   );
 };
