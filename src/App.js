@@ -20,19 +20,20 @@ const Container = styled.div`
 const AppLabel = styled.span`
   color: #3dcfd3;
   font-size: 24px;
-  font-weight: bold;
-  // margin-top: 20px;
+  font-weight: 500;
+  margin-top: 10px;
   padding-top: 35px;
+  font-family: "Gugi";
 `;
 
-const CityComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const WeatherComponent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+// const CityComponent = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
+// const WeatherComponent = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
 const App = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState("");

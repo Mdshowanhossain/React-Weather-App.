@@ -46,6 +46,7 @@ const Condition = styled.span`
   margin: 20px auto;
   font-size: 14px;
   color: #3dcfd3;
+  font-family: "Gugi";
   & span {
     font-size: 28px;
     color: #3dcfd3;
@@ -56,14 +57,17 @@ const Location = styled.span`
   font-size: 27px;
   font-weight: bold;
   color: #3dcfd3;
+  font-family: "Gugi";
+  letter-spacing: 2px;
 `;
 const WeatherInfoLabel = styled.span`
   font-size: 14px;
-  font-weight: bold;
+  // font-weight: bold;
   margin: 20px;
   text-align: start;
   width: 70%;
   color: #3dcfd3;
+  font-family: "Gugi";
 `;
 
 const InfoContainer = styled.div`
@@ -91,6 +95,9 @@ const InfoLabel = styled.span`
   & span {
     font-size: 12px;
     text-transform: uppercase;
+    font-family: "Zen Kurenaido", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
   }
 `;
 
